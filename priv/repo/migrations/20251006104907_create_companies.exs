@@ -1,0 +1,15 @@
+defmodule Timeclock.Repo.Migrations.CreateCompanies do
+  use Ecto.Migration
+
+  def change do
+    create table(:companies) do
+      add :name, :string
+      add :registration_number, :string
+      add :address_id, references(:addresses, on_delete: :nothing)
+
+      timestamps(type: :utc_datetime)
+    end
+
+    create index(:companies, [:address_id])
+  end
+end

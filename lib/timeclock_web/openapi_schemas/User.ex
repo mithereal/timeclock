@@ -1,0 +1,38 @@
+defmodule TimeclockWeb.OpenApi.Schemas.User do
+  require OpenApiSpex
+  OpenApiSpex.schema(%{title: "User", type: :object, properties: %{
+      "Id" => %Schema{type: "string", format: "uuid"},
+      "FirstName" => %Schema{type: "string"},
+      "LastName" => %Schema{type: "string"},
+      "MiddleName" => %Schema{type: "string"},
+      "FullName" => %Schema{type: "string"},
+      "BirthDate" => %Schema{type: "string", format: "date-time"},
+      "Address" => %Schema{type: "string"},
+      "City" => %Schema{type: "string"},
+      "State" => %Schema{type: "string"},
+      "Phone" => %Schema{type: "string"},
+      "Mobile" => %Schema{type: "string"},
+      "Email" => %Schema{type: "string"},
+      "Gender" => %Schema{type: "string"},
+      "PictureUri" => %Schema{type: "string"},
+      "CustomId" => %Schema{type: "string"},
+      "CustomField1" => %Schema{type: "string"},
+      "CustomField2" => %Schema{type: "string"},
+      "CustomField3" => %Schema{type: "string"},
+      "CustomField4" => %Schema{type: "string"},
+      "CustomField5" => %Schema{type: "string"},
+      "CustomField6" => %Schema{type: "string"},
+      "CustomField7" => %Schema{type: "string"},
+      "CustomField8" => %Schema{type: "string"},
+      "CustomField9" => %Schema{type: "string"},
+      "CustomField10" => %Schema{type: "string"},
+      "IsTimeAttendanceUser" => %Schema{type: "boolean"},
+      "IsArchived" => %Schema{type: "boolean"},
+      "HasUserAccount" => %Schema{type: "boolean"},
+      "UserAccountId" => %Schema{type: "string", format: "uuid"},
+      "UserName" => %Schema{type: "string"},
+      "CalculationStartDate" => %Schema{type: "string", format: "date-time"},
+      "CalculationStopDate" => %Schema{type: "string", format: "date-time"},
+      "HasAssignedPin" => %Schema{type: "boolean"}
+    }})
+end
