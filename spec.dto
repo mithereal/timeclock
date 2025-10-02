@@ -1,0 +1,7291 @@
+"schemas": {
+"AbsenceBulkCreateDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"AbsenceDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"Origin": {
+"type": "integer",
+"format": "int32"
+},
+"Comment": {
+"type": "string",
+"nullable": true
+},
+"IsAuthentic": {
+"type": "boolean"
+},
+"PartialTimeFrom": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"PartialTimeTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"IsPartial": {
+"type": "boolean"
+},
+"OverrideHolidayAbsence": {
+"type": "boolean"
+},
+"PeriodOptions": {
+"type": "integer",
+"format": "int32"
+},
+"PeriodFrom": {
+"type": "string",
+"format": "date-time"
+},
+"PeriodTo": {
+"type": "string",
+"format": "date-time"
+}
+},
+"additionalProperties": false
+},
+"AbsenceCreateDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"Timestamp": {
+"type": "string",
+"format": "date-time"
+},
+"AbsenceDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"Origin": {
+"type": "integer",
+"format": "int32"
+},
+"Comment": {
+"type": "string",
+"nullable": true
+},
+"PartialTimeFrom": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"PartialTimeTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"PartialTimeDuration": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"IsPartial": {
+"type": "boolean"
+},
+"OverrideHolidayAbsence": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"AbsenceDefinitionCreateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"IntegrationId": {
+"type": "integer",
+"format": "int32"
+},
+"IsAvailableForAdminsOnly": {
+"type": "boolean"
+},
+"CategoryDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"RestrictionType": {
+"type": "integer",
+"format": "int32"
+},
+"TagId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"AbsenceDefinitionDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"IntegrationId": {
+"type": "integer",
+"format": "int32"
+},
+"Code": {
+"type": "integer",
+"format": "int32"
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"IsAvailableForAdminsOnly": {
+"type": "boolean"
+},
+"CategoryDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"CategoryDefinitionName": {
+"type": "string",
+"nullable": true
+},
+"Fraction": {
+"type": "number",
+"format": "double"
+},
+"IconId": {
+"type": "string",
+"nullable": true
+},
+"IsActive": {
+"type": "boolean"
+},
+"RestrictionType": {
+"type": "integer",
+"format": "int32"
+},
+"TagId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"AbsenceDefinitionUpdateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"IntegrationId": {
+"type": "integer",
+"format": "int32"
+},
+"IsAvailableForAdminsOnly": {
+"type": "boolean"
+},
+"CategoryDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"IsActive": {
+"type": "boolean"
+},
+"RestrictionType": {
+"type": "integer",
+"format": "int32"
+},
+"TagId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"AbsenceDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"GroupId": {
+"type": "string",
+"format": "uuid"
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"MiddleName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"Timestamp": {
+"type": "string",
+"format": "date-time"
+},
+"AbsenceDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"AbsenceDefinitionName": {
+"type": "string",
+"nullable": true
+},
+"InsertedOn": {
+"type": "string",
+"format": "date-time"
+},
+"ModifiedOn": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"Origin": {
+"type": "integer",
+"format": "int32"
+},
+"OriginDisplayName": {
+"type": "string",
+"nullable": true
+},
+"Comment": {
+"type": "string",
+"nullable": true
+},
+"IsAuthentic": {
+"type": "boolean"
+},
+"IconId": {
+"type": "string",
+"nullable": true
+},
+"IconColor": {
+"type": "string",
+"nullable": true
+},
+"IsCalculated": {
+"type": "boolean"
+},
+"Status": {
+"type": "integer",
+"format": "int32"
+},
+"ApprovalRequest": {
+"$ref": "#/components/schemas/ApprovalRequestDto"
+},
+"PartialTimeFrom": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"PartialTimeTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"PartialTimeDuration": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"IsPartial": {
+"type": "boolean"
+},
+"OverrideHolidayAbsence": {
+"type": "boolean"
+},
+"IsModified": {
+"type": "boolean"
+},
+"ModifiedByUser": {
+"type": "string",
+"nullable": true
+},
+"AbsenceDefinitionType": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"AbsenceObfuscatedDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"MiddleName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"Timestamp": {
+"type": "string",
+"format": "date-time"
+},
+"Status": {
+"type": "integer",
+"format": "int32"
+},
+"PartialTimeFrom": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"PartialTimeTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"IsPartial": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"AbsenceUpdateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"Timestamp": {
+"type": "string",
+"format": "date-time"
+},
+"AbsenceDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"Origin": {
+"type": "integer",
+"format": "int32"
+},
+"Comment": {
+"type": "string",
+"nullable": true
+},
+"PartialTimeFrom": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"PartialTimeTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"PartialTimeDuration": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"IsPartial": {
+"type": "boolean"
+},
+"OverrideHolidayAbsence": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"AddressDto": {
+"type": "object",
+"properties": {
+"Line": {
+"type": "string",
+"nullable": true
+},
+"City": {
+"type": "string",
+"nullable": true
+},
+"Country": {
+"type": "string",
+"nullable": true
+},
+"PostalCode": {
+"type": "string",
+"nullable": true
+},
+"State": {
+"type": "string",
+"nullable": true
+},
+"IpAddress": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"AdjustmentBulkCreateDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"Value": {
+"type": "number",
+"format": "double"
+},
+"Timestamp": {
+"type": "string",
+"format": "date-time"
+},
+"AdjustmentDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"Comment": {
+"type": "string",
+"nullable": true
+},
+"Origin": {
+"type": "integer",
+"format": "int32"
+},
+"PeriodOptions": {
+"type": "integer",
+"format": "int32"
+},
+"PeriodFrom": {
+"type": "string",
+"format": "date-time"
+},
+"PeriodTo": {
+"type": "string",
+"format": "date-time"
+},
+"IsPartial": {
+"type": "boolean"
+},
+"PartialTimeFrom": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"PartialTimeTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"AdjustmentCreateDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"AdjustmentDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"Value": {
+"type": "number",
+"format": "double"
+},
+"Timestamp": {
+"type": "string",
+"format": "date-time"
+},
+"Comment": {
+"type": "string",
+"nullable": true
+},
+"Status": {
+"type": "integer",
+"format": "int32"
+},
+"Origin": {
+"type": "integer",
+"format": "int32"
+},
+"PartialTimeFrom": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"PartialTimeTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"AdjustmentDefinitionCreateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"CalculationResultTypeId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"IsAvailableForAdminsOnly": {
+"type": "boolean"
+},
+"RestrictionType": {
+"type": "integer",
+"format": "int32"
+},
+"TagId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"AdjustmentDefinitionDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"Code": {
+"type": "integer",
+"format": "int32"
+},
+"CalculationResultTypeId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"CalculationResultTypeName": {
+"type": "string",
+"nullable": true
+},
+"CalculationResultTypeValueType": {
+"type": "integer",
+"format": "int32"
+},
+"IsAvailableForAdminsOnly": {
+"type": "boolean"
+},
+"IsActive": {
+"type": "boolean"
+},
+"RestrictionType": {
+"type": "integer",
+"format": "int32"
+},
+"TagId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"AdjustmentDefinitionUpdateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"CalculationResultTypeId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"IsAvailableForAdminsOnly": {
+"type": "boolean"
+},
+"RestrictionType": {
+"type": "integer",
+"format": "int32"
+},
+"TagId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"IsActive": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"AdjustmentDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"MiddleName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"Value": {
+"type": "number",
+"format": "double"
+},
+"Timestamp": {
+"type": "string",
+"format": "date-time"
+},
+"AdjustmentDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"AdjustmentDefinitionName": {
+"type": "string",
+"nullable": true
+},
+"AdjustmentDefinitionCode": {
+"type": "integer",
+"format": "int32"
+},
+"CalculationResultTypeValueType": {
+"type": "integer",
+"format": "int32"
+},
+"IsAuthentic": {
+"type": "boolean"
+},
+"Comment": {
+"type": "string",
+"nullable": true
+},
+"Status": {
+"type": "integer",
+"format": "int32"
+},
+"Origin": {
+"type": "integer",
+"format": "int32"
+},
+"InsertedOn": {
+"type": "string",
+"format": "date-time"
+},
+"IconId": {
+"type": "string",
+"nullable": true
+},
+"PartialTimeFrom": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"PartialTimeTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"IsPartial": {
+"type": "boolean"
+},
+"PartialTimeDuration": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ApprovalRequest": {
+"$ref": "#/components/schemas/ApprovalRequestDto"
+},
+"GroupId": {
+"type": "string",
+"format": "uuid"
+}
+},
+"additionalProperties": false
+},
+"AggregateFunctionDto": {
+"type": "object",
+"properties": {
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"IsEnabled": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"AnalyticsActivityDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Properties": {
+"type": "object",
+"additionalProperties": {
+"type": "string",
+"nullable": true
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ApprovalPermissionDelegationCreateDto": {
+"type": "object",
+"properties": {
+"DelegatedUserId": {
+"type": "string",
+"format": "uuid"
+}
+},
+"additionalProperties": false
+},
+"ApprovalPermissionDelegationDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"DelegatedUserId": {
+"type": "string",
+"format": "uuid"
+},
+"DelegatedUserName": {
+"type": "string",
+"nullable": true
+},
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"UserName": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ApprovalRequestAdditionalDataDto": {
+"type": "object",
+"properties": {
+"IntegerValue": {
+"type": "string",
+"nullable": true
+},
+"TimeValue": {
+"type": "string",
+"nullable": true
+},
+"AppliersComment": {
+"type": "string",
+"nullable": true
+},
+"ApproversComment": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ApprovalRequestBulkUpdateDto": {
+"type": "object",
+"properties": {
+"ApprovalRequestId": {
+"type": "string",
+"format": "uuid"
+},
+"ApprovalAction": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"ApprovalRequestDefinitionDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"RequestType": {
+"$ref": "#/components/schemas/RequestType"
+},
+"StartTimeParameterRequired": {
+"type": "boolean"
+},
+"EndTimeParameterRequired": {
+"type": "boolean"
+},
+"NumericValueRequired": {
+"type": "boolean"
+},
+"TimeValueRequired": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"ApprovalRequestDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"UserName": {
+"type": "string",
+"nullable": true
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"PeriodStart": {
+"type": "string",
+"format": "date-time"
+},
+"PeriodEnd": {
+"type": "string",
+"format": "date-time"
+},
+"Status": {
+"type": "integer",
+"format": "int32"
+},
+"StatusSetByUserId": {
+"type": "string",
+"format": "uuid"
+},
+"StatusSetByUser": {
+"type": "string",
+"nullable": true
+},
+"EventDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"EventDefinitionName": {
+"type": "string",
+"nullable": true
+},
+"EventDefinitionCode": {
+"type": "integer",
+"format": "int32"
+},
+"EventDefinitionType": {
+"type": "integer",
+"format": "int32"
+},
+"AdditionalData": {
+"$ref": "#/components/schemas/ApprovalRequestAdditionalDataDto"
+},
+"IsPartial": {
+"type": "boolean"
+},
+"PartialTimeFrom": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"PartialTimeTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CreatedOn": {
+"type": "string",
+"format": "date-time"
+},
+"ModifiedOn": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"IconId": {
+"type": "string",
+"nullable": true
+},
+"UserPictureUri": {
+"type": "string",
+"nullable": true
+},
+"PeriodOptions": {
+"type": "integer",
+"format": "int32"
+},
+"CurrentApproverNames": {
+"type": "string",
+"nullable": true
+},
+"IsDirty": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"ApprovalRequestLogDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"UserName": {
+"type": "string",
+"nullable": true
+},
+"Action": {
+"type": "integer",
+"format": "int32"
+},
+"DateTime": {
+"type": "string",
+"format": "date-time"
+}
+},
+"additionalProperties": false
+},
+"AuditLogDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"TableName": {
+"type": "string",
+"nullable": true
+},
+"EntityId": {
+"type": "string",
+"format": "uuid"
+},
+"EntityType": {
+"type": "string",
+"nullable": true
+},
+"EntityTypeName": {
+"type": "string",
+"nullable": true
+},
+"IpAddress": {
+"type": "string",
+"nullable": true
+},
+"Action": {
+"type": "integer",
+"format": "int32"
+},
+"DateTime": {
+"type": "string",
+"format": "date-time"
+},
+"OldValue": {
+"type": "string",
+"nullable": true
+},
+"NewValue": {
+"type": "string",
+"nullable": true
+},
+"SupportAccountId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"UserName": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"AuditLogTypeDto": {
+"type": "object",
+"properties": {
+"DisplayName": {
+"type": "string",
+"nullable": true
+},
+"Value": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"AutomatedReportTaskCreateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"StartDate": {
+"type": "string",
+"format": "date"
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"Period": {
+"type": "integer",
+"format": "int32"
+},
+"Recurrence": {
+"type": "integer",
+"format": "int32"
+},
+"Status": {
+"type": "integer",
+"format": "int32"
+},
+"TimeZone": {
+"type": "string",
+"nullable": true
+},
+"RecipientId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"ReportTemplateId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"ScopeUserId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"ScopeTagIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+},
+"ScopeOrganizationUnitIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+},
+"BccEmail": {
+"type": "string",
+"nullable": true
+},
+"NotesTerms": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"AutomatedReportTaskDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"StartDate": {
+"type": "string",
+"format": "date"
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"Period": {
+"type": "integer",
+"format": "int32"
+},
+"Recurrence": {
+"type": "integer",
+"format": "int32"
+},
+"Status": {
+"type": "integer",
+"format": "int32"
+},
+"TimeZone": {
+"type": "string",
+"nullable": true
+},
+"NextRunDate": {
+"type": "string",
+"format": "date"
+},
+"Recipient": {
+"$ref": "#/components/schemas/UserDto"
+},
+"ReportTemplate": {
+"$ref": "#/components/schemas/AutomatedReportTaskReportTemplateDto"
+},
+"ScopeUserId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"ScopeTagIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+},
+"ScopeOrganizationUnitIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+},
+"BccEmail": {
+"type": "string",
+"nullable": true
+},
+"EstimatedMonthlyEmails": {
+"type": "integer",
+"format": "int32"
+},
+"NotesTerms": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"AutomatedReportTaskLogDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"AutomatedReportTaskType": {
+"type": "integer",
+"format": "int32"
+},
+"StartedOn": {
+"type": "string",
+"format": "date-time"
+},
+"CompletedOn": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"AutomatedReportTaskId": {
+"type": "string",
+"format": "uuid"
+},
+"AutomatedReportTaskName": {
+"type": "string",
+"nullable": true
+},
+"TriggerType": {
+"type": "integer",
+"format": "int32"
+},
+"Status": {
+"type": "integer",
+"format": "int32"
+},
+"Error": {
+"type": "string",
+"nullable": true
+},
+"GroupId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"AutomatedReportTaskReportTemplateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"nullable": true
+},
+"Name": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"AutomatedReportTaskUpdateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"StartDate": {
+"type": "string",
+"format": "date"
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"Period": {
+"type": "integer",
+"format": "int32"
+},
+"Recurrence": {
+"type": "integer",
+"format": "int32"
+},
+"Status": {
+"type": "integer",
+"format": "int32"
+},
+"TimeZone": {
+"type": "string",
+"nullable": true
+},
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"RecipientId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"ReportTemplateId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"ScopeUserId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"ScopeTagIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+},
+"ScopeOrganizationUnitIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+},
+"BccEmail": {
+"type": "string",
+"nullable": true
+},
+"NotesTerms": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"AutomaticSsmSelectionRuleDto": {
+"type": "object",
+"properties": {
+"ClockingTimeInterval": {
+"$ref": "#/components/schemas/Int32Int32KeyValuePair"
+},
+"CalculatedSsmTime": {
+"type": "integer",
+"format": "int32"
+},
+"ValidDays": {
+"type": "integer",
+"format": "int32"
+},
+"StartingWorkPlanRuleSettingsId": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"BeaconCreateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"MajorValue": {
+"type": "integer",
+"format": "int32"
+},
+"MinorValue": {
+"type": "integer",
+"format": "int32"
+},
+"ClockingPointId": {
+"type": "string",
+"format": "uuid"
+},
+"Uuid": {
+"type": "string",
+"format": "uuid"
+}
+},
+"additionalProperties": false
+},
+"BeaconDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"MajorValue": {
+"type": "integer",
+"format": "int32"
+},
+"MinorValue": {
+"type": "integer",
+"format": "int32"
+},
+"ClockingPointId": {
+"type": "string",
+"format": "uuid"
+},
+"Uuid": {
+"type": "string",
+"format": "uuid"
+}
+},
+"additionalProperties": false
+},
+"BeaconUpdateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"MajorValue": {
+"type": "integer",
+"format": "int32"
+},
+"MinorValue": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"CalculationCategoryDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Color": {
+"type": "string",
+"nullable": true
+},
+"Value": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"CalculationDetailDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Value": {
+"type": "number",
+"format": "double"
+},
+"ValueType": {
+"type": "integer",
+"format": "int32"
+},
+"Color": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"CalculationDetailsSummaryDto": {
+"type": "object",
+"properties": {
+"CalculationDetails": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/CalculationDetailDto"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"CalculationDto": {
+"type": "object",
+"properties": {
+"DateFrom": {
+"type": "string",
+"format": "date-time"
+},
+"DateTo": {
+"type": "string",
+"format": "date-time"
+},
+"UsersCount": {
+"type": "integer",
+"format": "int32"
+},
+"UsersCalculations": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/UserCalculationsDto"
+},
+"nullable": true
+},
+"CalculationDetailsSummaries": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/CalculationDetailsSummaryDto"
+},
+"nullable": true
+},
+"PlanSumValue": {
+"type": "integer",
+"format": "int32"
+},
+"DifferenceSumValue": {
+"type": "integer",
+"format": "int32"
+},
+"PaidPresenceSumValue": {
+"type": "integer",
+"format": "int32"
+},
+"PaidAllDayAbsenceSumValue": {
+"type": "integer",
+"format": "int32"
+},
+"MissingPresenceSumValue": {
+"type": "integer",
+"format": "int32"
+},
+"UnpaidPresenceSumValue": {
+"type": "integer",
+"format": "int32"
+},
+"WorkFreeDaysSumValue": {
+"type": "integer",
+"format": "int32"
+},
+"WorkDaysSumValue": {
+"type": "integer",
+"format": "int32"
+},
+"IsCalculationValid": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"CalculationResultDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"ValueType": {
+"type": "integer",
+"format": "int32"
+},
+"Value": {
+"type": "string",
+"nullable": true
+},
+"CalculationResultTypeCode": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"CalculationResultTypeDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"ValueType": {
+"type": "integer",
+"format": "int32"
+},
+"Code": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"CalendarEventDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Date": {
+"type": "string",
+"format": "date-time"
+},
+"ValidTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CalendarGroupId": {
+"type": "string",
+"format": "uuid"
+},
+"CalendarGroupName": {
+"type": "string",
+"nullable": true
+},
+"CalendarEventTypeId": {
+"type": "string",
+"format": "uuid"
+},
+"CalendarEventTypeCode": {
+"type": "integer",
+"format": "int32"
+},
+"CalendarEventTypeName": {
+"type": "string",
+"nullable": true
+},
+"RecurringMode": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"CalendarEventTypeDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Code": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"CalendarGroupBulkCopyDto": {
+"type": "object",
+"properties": {
+"CalendarGroupIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"CalendarGroupDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Workdays": {
+"type": "integer",
+"format": "int32"
+},
+"TimeZone": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"CalendarImportDto": {
+"type": "object",
+"properties": {
+"CalendarGroupId": {
+"type": "string",
+"format": "uuid"
+},
+"Country": {
+"type": "string",
+"nullable": true
+},
+"Region": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"CardDto": {
+"type": "object",
+"properties": {
+"Brand": {
+"type": "string",
+"nullable": true
+},
+"ExpMonth": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"ExpYear": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Last4": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"CategoryDefinitionCreateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"PresenceStatus": {
+"type": "integer",
+"format": "int32"
+},
+"PaidTimeStatus": {
+"type": "integer",
+"format": "int32"
+},
+"Color": {
+"type": "integer",
+"format": "int32"
+},
+"IconId": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"CategoryDefinitionDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"PresenceStatus": {
+"type": "integer",
+"format": "int32"
+},
+"PaidTimeStatus": {
+"type": "integer",
+"format": "int32"
+},
+"Color": {
+"type": "integer",
+"format": "int32"
+},
+"IconId": {
+"type": "string",
+"nullable": true
+},
+"Code": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"CategoryDefinitionUpdateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"PresenceStatus": {
+"type": "integer",
+"format": "int32"
+},
+"PaidTimeStatus": {
+"type": "integer",
+"format": "int32"
+},
+"Color": {
+"type": "integer",
+"format": "int32"
+},
+"IconId": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ClaimActionDto": {
+"type": "object",
+"properties": {
+"ClaimActionId": {
+"type": "string",
+"format": "uuid"
+},
+"ClaimActionType": {
+"type": "integer",
+"format": "int32"
+},
+"ClaimId": {
+"type": "string",
+"format": "uuid"
+}
+},
+"additionalProperties": false
+},
+"ClockButtonDto": {
+"type": "object",
+"properties": {
+"ClockingDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"ClockingDefinitionName": {
+"type": "string",
+"nullable": true
+},
+"IconId": {
+"type": "integer",
+"format": "int32"
+},
+"IsEnabled": {
+"type": "boolean"
+},
+"Color": {
+"$ref": "#/components/schemas/Color"
+}
+},
+"additionalProperties": false
+},
+"ClockDto": {
+"type": "object",
+"properties": {
+"Status": {
+"$ref": "#/components/schemas/UserPresenceDto"
+},
+"ClockingEnabled": {
+"type": "boolean"
+},
+"ClientIpAddress": {
+"type": "string",
+"nullable": true
+},
+"ClockingButtons": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/ClockButtonDto"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ClockingAuthenticCreateDto": {
+"type": "object",
+"properties": {
+"Comment": {
+"type": "string",
+"nullable": true
+},
+"Origin": {
+"type": "integer",
+"format": "int32"
+},
+"GeoLocationTimestamp": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"Latitude": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"Longitude": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"Accuracy": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"DeviceId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"BeaconId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"ClockingPointId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"ClockingDefinitionId": {
+"type": "string",
+"format": "uuid"
+}
+},
+"additionalProperties": false
+},
+"ClockingBulkCreateDto": {
+"type": "object",
+"properties": {
+"Comment": {
+"type": "string",
+"nullable": true
+},
+"Origin": {
+"type": "integer",
+"format": "int32"
+},
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"ClockingDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"PeriodOptions": {
+"type": "integer",
+"format": "int32"
+},
+"PeriodFrom": {
+"type": "string",
+"format": "date-time"
+},
+"PeriodTo": {
+"type": "string",
+"format": "date-time"
+}
+},
+"additionalProperties": false
+},
+"ClockingCreateDto": {
+"type": "object",
+"properties": {
+"Comment": {
+"type": "string",
+"nullable": true
+},
+"Origin": {
+"type": "integer",
+"format": "int32"
+},
+"Timestamp": {
+"type": "string",
+"format": "date-time"
+},
+"GeoLocationTimestamp": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"Latitude": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"Longitude": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"Accuracy": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"DeviceId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"BeaconId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"ClockingPointId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"ClockingDefinitionId": {
+"type": "string",
+"format": "uuid"
+}
+},
+"additionalProperties": false
+},
+"ClockingDefinitionCreateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"StartingCategoryDefinitionId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"AbsenceCategoryDefinitionId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"InClockingDefinitionId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"OutClockingDefinitionId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"RestrictionType": {
+"type": "integer",
+"format": "int32"
+},
+"TagId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ClockingDefinitionDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"Code": {
+"type": "integer",
+"format": "int32"
+},
+"StartingCategoryDefinitionId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"StartingCategoryDefinitionName": {
+"type": "string",
+"nullable": true
+},
+"AbsenceCategoryDefinitionId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"AbsenceCategoryDefinitionName": {
+"type": "string",
+"nullable": true
+},
+"InClockingDefinitionId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"InClockingDefinitionName": {
+"type": "string",
+"nullable": true
+},
+"OutClockingDefinitionId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"OutClockingDefinitionName": {
+"type": "string",
+"nullable": true
+},
+"IsActive": {
+"type": "boolean"
+},
+"RestrictionType": {
+"type": "integer",
+"format": "int32"
+},
+"TagId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ClockingDefinitionUpdateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"StartingCategoryDefinitionId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"AbsenceCategoryDefinitionId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"InClockingDefinitionId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"OutClockingDefinitionId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"RestrictionType": {
+"type": "integer",
+"format": "int32"
+},
+"TagId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"IsActive": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"ClockingDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Timestamp": {
+"type": "string",
+"format": "date-time"
+},
+"OriginalTimestamp": {
+"type": "string",
+"format": "date-time"
+},
+"IsAuthentic": {
+"type": "boolean"
+},
+"Comment": {
+"type": "string",
+"nullable": true
+},
+"Origin": {
+"type": "integer",
+"format": "int32"
+},
+"OriginDisplayName": {
+"type": "string",
+"nullable": true
+},
+"Status": {
+"type": "integer",
+"format": "int32"
+},
+"InsertedOn": {
+"type": "string",
+"format": "date-time"
+},
+"IsModified": {
+"type": "boolean"
+},
+"ModifiedByUser": {
+"type": "string",
+"nullable": true
+},
+"ModifiedOn": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"GeoLocationTimestamp": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"HasGeoLocation": {
+"type": "boolean"
+},
+"Accuracy": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"MiddleName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"DeviceId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"BeaconId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"ClockingPointId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"ClockingPointName": {
+"type": "string",
+"nullable": true
+},
+"ClockingDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"ClockingDefinitionName": {
+"type": "string",
+"nullable": true
+},
+"OriginalClockingDefinitionId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"OriginalClockingDefinitionName": {
+"type": "string",
+"nullable": true
+},
+"ApprovalRequest": {
+"$ref": "#/components/schemas/ApprovalRequestDto"
+}
+},
+"additionalProperties": false
+},
+"ClockingInterfaceCreateDto": {
+"type": "object",
+"properties": {
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"IsDefault": {
+"type": "boolean"
+},
+"ClockingInterfaceDetails": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/ClockingInterfaceDetailCreateDto"
+},
+"nullable": true
+},
+"EntityId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ClockingInterfaceDetailCreateDto": {
+"type": "object",
+"properties": {
+"ButtonIndex": {
+"type": "integer",
+"format": "int32"
+},
+"EventIndex": {
+"type": "integer",
+"format": "int32"
+},
+"ClockingDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"IconId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"IsDefault": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"ClockingInterfaceDetailDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"ButtonIndex": {
+"type": "integer",
+"format": "int32"
+},
+"EventIndex": {
+"type": "integer",
+"format": "int32"
+},
+"ClockingDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"ClockingDefinitionName": {
+"type": "string",
+"nullable": true
+},
+"IconId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"IsDefault": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"ClockingInterfaceDetailUpdateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"ButtonIndex": {
+"type": "integer",
+"format": "int32"
+},
+"EventIndex": {
+"type": "integer",
+"format": "int32"
+},
+"ClockingDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"IconId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"IsDefault": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"ClockingInterfaceDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"IsDefault": {
+"type": "boolean"
+},
+"ClockingInterfaceDetails": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/ClockingInterfaceDetailDto"
+},
+"nullable": true
+},
+"EntityId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ClockingInterfaceUpdateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"IsDefault": {
+"type": "boolean"
+},
+"ClockingInterfaceDetails": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/ClockingInterfaceDetailUpdateDto"
+},
+"nullable": true
+},
+"EntityId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ClockingPointCreateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Description": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ClockingPointDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Description": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ClockingPointSummaryDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Description": {
+"type": "string",
+"nullable": true
+},
+"TimeClocks": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/TimeClockDto"
+},
+"nullable": true
+},
+"GeoLocations": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/GeoLocationDto"
+},
+"nullable": true
+},
+"Beacons": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/BeaconDto"
+},
+"nullable": true
+},
+"NetworkRestrictions": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/NetworkRestrictionDto"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ClockingPointUpdateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Description": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ColumnFilterDto": {
+"type": "object",
+"properties": {
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"Value": {
+"type": "number",
+"format": "double"
+},
+"IsEnabled": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"CounterAbsenceSourceSummaryDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"MathOperation": {
+"type": "integer",
+"format": "int32"
+},
+"AbsenceDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"AbsenceDefinition": {
+"$ref": "#/components/schemas/AbsenceDefinitionDto"
+}
+},
+"additionalProperties": false
+},
+"CounterAdjustmentSourceSummaryDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"MathOperation": {
+"type": "integer",
+"format": "int32"
+},
+"AdjustmentDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"AdjustmentDefinition": {
+"$ref": "#/components/schemas/AdjustmentDefinitionDto"
+}
+},
+"additionalProperties": false
+},
+"CounterAssignmentDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"ValidFrom": {
+"type": "string",
+"format": "date-time"
+},
+"ValidTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"DayTypeRestriction": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"CounterDefinitionId": {
+"type": "string",
+"format": "uuid"
+}
+},
+"additionalProperties": false
+},
+"CounterCalculationResultTypeSourceSummaryDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"MathOperation": {
+"type": "integer",
+"format": "int32"
+},
+"CalculationResultTypeId": {
+"type": "string",
+"format": "uuid"
+},
+"CalculationResultType": {
+"$ref": "#/components/schemas/CalculationResultTypeDto"
+}
+},
+"additionalProperties": false
+},
+"CounterCalculationRuleSummaryDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"ExecutionPointType": {
+"type": "integer",
+"format": "int32"
+},
+"ExecutionPointDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"UseYesterdayValue": {
+"type": "boolean"
+},
+"ConditionParameterValueType": {
+"type": "integer",
+"format": "int32"
+},
+"ConditionParameterValue": {
+"type": "string",
+"nullable": true
+},
+"CalculationOrder": {
+"type": "integer",
+"format": "int32"
+},
+"ExecutionPointCalendarEventTypeId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"ExecutionPointCalendarEventType": {
+"$ref": "#/components/schemas/CalendarEventTypeDto"
+},
+"CounterRuleDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"CounterRuleDefinition": {
+"$ref": "#/components/schemas/CounterRuleDefinitionDto"
+},
+"DerivationCalculationResultTypeId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"DerivationCalculationResultType": {
+"$ref": "#/components/schemas/CalculationResultTypeDto"
+},
+"ConditionParameterCalculationResultTypeId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"ConditionParameterCalculationResultType": {
+"$ref": "#/components/schemas/CalculationResultTypeDto"
+}
+},
+"additionalProperties": false
+},
+"CounterCategoryDefinitionRestrictionSummaryDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"CategoryDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"CategoryDefinition": {
+"$ref": "#/components/schemas/CategoryDefinitionDto"
+}
+},
+"additionalProperties": false
+},
+"CounterClockingSourceSummaryDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"MathOperation": {
+"type": "integer",
+"format": "int32"
+},
+"ClockingDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"ClockingDefinition": {
+"$ref": "#/components/schemas/ClockingDefinitionDto"
+}
+},
+"additionalProperties": false
+},
+"CounterDailyThresholdConditionDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"ConditionType": {
+"type": "integer",
+"format": "int32"
+},
+"ResultType": {
+"type": "integer",
+"format": "int32"
+},
+"Value": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"CounterDefinitionCreateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Description": {
+"type": "string",
+"nullable": true
+},
+"Icon": {
+"type": "string",
+"format": "byte",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"ValueType": {
+"type": "integer",
+"format": "int32"
+},
+"CalculationOrder": {
+"type": "integer",
+"format": "int32"
+},
+"Code": {
+"type": "integer",
+"format": "int32"
+},
+"Visibility": {
+"type": "integer",
+"format": "int32"
+},
+"OverMidnightBehaviour": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"CounterRuleDefinitionDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Code": {
+"type": "integer",
+"format": "int32"
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"CounterTimeIntervalRestrictionDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"StartInterval": {
+"type": "integer",
+"format": "int32"
+},
+"EndInterval": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"CountryDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"TwoLetterIsoCode": {
+"type": "string",
+"nullable": true
+},
+"ThreeLetterIsoCode": {
+"type": "string",
+"nullable": true
+},
+"Regions": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/CountryRegionDto"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"CountryRegionDto": {
+"type": "object",
+"properties": {
+"Code": {
+"type": "string",
+"nullable": true
+},
+"Name": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"CouponDto": {
+"type": "object",
+"properties": {
+"CouponId": {
+"type": "string",
+"nullable": true
+},
+"AmountOff": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"PercentOff": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"Duration": {
+"type": "string",
+"nullable": true
+},
+"Name": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"CurrentBalanceDto": {
+"type": "object",
+"properties": {
+"Balance": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"BalanceText": {
+"type": "string",
+"nullable": true
+},
+"RunningBalance": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"VacationBalance": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"BalanceResponseMode": {
+"type": "integer",
+"format": "int32"
+},
+"Greeting": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"CurrentPeriodVacationQuotaDto": {
+"type": "object",
+"properties": {
+"Value": {
+"type": "number",
+"format": "double"
+},
+"ValueType": {
+"$ref": "#/components/schemas/ResultValueType"
+},
+"VacationTransferDate": {
+"type": "string",
+"format": "date"
+}
+},
+"additionalProperties": false
+},
+"DailyCategoryDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"IconId": {
+"type": "string",
+"nullable": true
+},
+"IconColor": {
+"type": "string",
+"nullable": true
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Value": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"DailySummaryDto": {
+"type": "object",
+"properties": {
+"DailyBalanceValue": {
+"type": "integer",
+"format": "int32"
+},
+"RunningBalanceValue": {
+"type": "integer",
+"format": "int32"
+},
+"DailyOvertimeValue": {
+"type": "integer",
+"format": "int32"
+},
+"RunningOvertimeValue": {
+"type": "integer",
+"format": "int32"
+},
+"PaidPresenceValue": {
+"type": "integer",
+"format": "int32"
+},
+"PaidAbsenceValue": {
+"type": "integer",
+"format": "int32"
+},
+"MissingPresenceValue": {
+"type": "integer",
+"format": "int32"
+},
+"UnpaidPresenceValue": {
+"type": "integer",
+"format": "int32"
+},
+"LunchBreakValue": {
+"type": "integer",
+"format": "int32"
+},
+"LunchBreakCountValue": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"DeviceMacAddressDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"MacAddress": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"EventValidationPolicyCreateDto": {
+"type": "object",
+"properties": {
+"EventDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"IsCommentRequired": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"EventValidationPolicyDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"EventDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"IsCommentRequired": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"EventValidationPolicyUpdateDto": {
+"type": "object",
+"properties": {
+"EventDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"IsCommentRequired": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"GeoLocationCreateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Latitude": {
+"type": "number",
+"format": "double"
+},
+"Longitude": {
+"type": "number",
+"format": "double"
+},
+"Radius": {
+"type": "number",
+"format": "double"
+},
+"ClockingPointId": {
+"type": "string",
+"format": "uuid"
+}
+},
+"additionalProperties": false
+},
+"GeoLocationDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Latitude": {
+"type": "number",
+"format": "double"
+},
+"Longitude": {
+"type": "number",
+"format": "double"
+},
+"Radius": {
+"type": "number",
+"format": "double"
+},
+"ClockingPointId": {
+"type": "string",
+"format": "uuid"
+}
+},
+"additionalProperties": false
+},
+"GeoLocationUpdateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Latitude": {
+"type": "number",
+"format": "double"
+},
+"Longitude": {
+"type": "number",
+"format": "double"
+},
+"Radius": {
+"type": "number",
+"format": "double"
+}
+},
+"additionalProperties": false
+},
+"GuidStringKeyValuePair": {
+"type": "object",
+"properties": {
+"Key": {
+"type": "string",
+"format": "uuid"
+},
+"Value": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"HolidayBonusRuleAssignmentDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"ValidFrom": {
+"type": "string",
+"format": "date-time"
+},
+"ValidTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"RuleDefinitionCode": {
+"type": "integer",
+"format": "int32"
+},
+"RuleDefinitionId": {
+"type": "string",
+"format": "uuid"
+},
+"SkipHolidaysWithPaidTime": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"HolidayDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Date": {
+"type": "string",
+"format": "date-time"
+}
+},
+"additionalProperties": false
+},
+"IdentifierCreateDto": {
+"type": "object",
+"properties": {
+"Value": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"IdentifierDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Value": {
+"type": "string",
+"nullable": true
+},
+"UserName": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"IdentifierUpdateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Value": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"LunchBreakConfigurationDto": {
+"type": "object",
+"properties": {
+"StartingLunchBreakRuleSettingsId": {
+"type": "integer",
+"format": "int32"
+},
+"MaximumDuration": {
+"type": "integer",
+"format": "int32"
+},
+"MinimumDuration": {
+"type": "integer",
+"format": "int32"
+},
+"StartOffset": {
+"type": "integer",
+"format": "int32"
+},
+"EndOffset": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"MissingEventExceptionDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Value": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"$ref": "#/components/schemas/MissingEventExceptionType"
+},
+"Color": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"MissingEventExceptionType": {
+"enum": [0, 1, 2, 3],
+"type": "integer",
+"format": "int32"
+},
+"NetworkRestrictionCreateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"IpRangeStart": {
+"type": "string",
+"nullable": true
+},
+"IpRangeEnd": {
+"type": "string",
+"nullable": true
+},
+"ClockingPointId": {
+"type": "string",
+"format": "uuid"
+}
+},
+"additionalProperties": false
+},
+"NetworkRestrictionDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"IpRangeStart": {
+"type": "string",
+"nullable": true
+},
+"IpRangeEnd": {
+"type": "string",
+"nullable": true
+},
+"ClockingPointId": {
+"type": "string",
+"format": "uuid"
+}
+},
+"additionalProperties": false
+},
+"NetworkRestrictionUpdateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"IpRangeStart": {
+"type": "string",
+"nullable": true
+},
+"IpRangeEnd": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"OrganizationUnitDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"ParentOrganizationUnitId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"ParentOrganizationUnitName": {
+"type": "string",
+"nullable": true
+},
+"LeftSubTreeIndex": {
+"type": "integer",
+"format": "int32"
+},
+"RightSubTreeIndex": {
+"type": "integer",
+"format": "int32"
+},
+"HasChildren": {
+"type": "boolean"
+},
+"LocalizedName": {
+"type": "string",
+"nullable": true
+},
+"DisplayName": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"PaidExitDayParametersDto": {
+"type": "object",
+"properties": {
+"PaidExitOffset": {
+"type": "integer",
+"format": "int32"
+},
+"ReturningFromAbsenceOffset": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"PaidTimeDayParametersDto": {
+"type": "object",
+"properties": {
+"Duration": {
+"type": "integer",
+"format": "int32"
+},
+"Offset": {
+"type": "integer",
+"format": "int32"
+},
+"Limit": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"PaymentMethodOptionDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"PayrollGridSettingDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Label": {
+"type": "string",
+"nullable": true
+},
+"Tooltip": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"OrderIndex": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"SelectedValue": {
+"type": "string",
+"nullable": true
+},
+"SelectedNumberValue": {
+"type": "string",
+"nullable": true
+},
+"AvailableValues": {
+"type": "object",
+"additionalProperties": {
+"type": "string",
+"nullable": true
+},
+"nullable": true
+},
+"GridSettings": {
+"type": "object",
+"additionalProperties": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/PayrollGridSettingDto"
+},
+"nullable": true
+},
+"nullable": true
+},
+"AvailableValueLengthOptions": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/ReportSettingDto"
+},
+"nullable": true
+},
+"Position": {
+"type": "integer",
+"format": "int32"
+},
+"PayrollId": {
+"type": "string",
+"nullable": true
+},
+"Value": {
+"$ref": "#/components/schemas/GuidStringKeyValuePair"
+},
+"DataField": {
+"type": "string",
+"nullable": true
+},
+"CalculateDisplayValue": {
+"type": "string",
+"nullable": true
+},
+"Caption": {
+"type": "string",
+"nullable": true
+},
+"Width": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"PresenceStatusDto": {
+"type": "object",
+"properties": {
+"Timestamp": {
+"type": "string",
+"format": "date-time"
+},
+"UserPresences": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/UserPresenceDto"
+},
+"nullable": true
+},
+"IsCalculationValid": {
+"type": "boolean"
+},
+"UsersCount": {
+"type": "integer",
+"format": "int32"
+},
+"PresenceStatusSummary": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/PresenceStatusSummaryDto"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"PresenceStatusSummaryDto": {
+"type": "object",
+"properties": {
+"Status": {
+"type": "integer",
+"format": "int32"
+},
+"Count": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"PreviousPeriodVacationQuotaDto": {
+"type": "object",
+"properties": {
+"Value": {
+"type": "number",
+"format": "double"
+},
+"ValueType": {
+"$ref": "#/components/schemas/ResultValueType"
+},
+"VacationCutDate": {
+"type": "string",
+"format": "date"
+}
+},
+"additionalProperties": false
+},
+"ProductDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Code": {
+"type": "integer",
+"format": "int32"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Description": {
+"type": "string",
+"nullable": true
+},
+"ApplicationUri": {
+"type": "string",
+"nullable": true
+},
+"LogoUri": {
+"type": "string",
+"nullable": true
+},
+"HasTrial": {
+"type": "boolean"
+},
+"IsActive": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"RenderSettingsDto": {
+"type": "object",
+"properties": {
+"ShowDetailsInHeader": {
+"type": "boolean"
+},
+"PageOrientation": {
+"type": "integer",
+"format": "int32"
+},
+"Grouping": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"ReportColumnDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Label": {
+"type": "string",
+"nullable": true
+},
+"IsVisible": {
+"type": "boolean"
+},
+"SortOrder": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"Format": {
+"type": "integer",
+"format": "int32"
+},
+"OrderIndex": {
+"type": "integer",
+"format": "int32"
+},
+"HorizontalAlignment": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"ColumnWidth": {
+"type": "integer",
+"format": "int32"
+},
+"AggregateFunction": {
+"$ref": "#/components/schemas/AggregateFunctionDto"
+},
+"RoundingFunction": {
+"$ref": "#/components/schemas/RoundingFunctionDto"
+},
+"Filter": {
+"$ref": "#/components/schemas/ColumnFilterDto"
+},
+"Code": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"ReportDefinitionDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Columns": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/ReportColumnDto"
+},
+"nullable": true
+},
+"Filters": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/ReportFilterDto"
+},
+"nullable": true
+},
+"Settings": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/ReportSettingDto"
+},
+"nullable": true
+},
+"RenderSettings": {
+"$ref": "#/components/schemas/RenderSettingsDto"
+},
+"SupportedFormats": {
+"type": "integer",
+"format": "int32"
+},
+"Format": {
+"type": "integer",
+"format": "int32"
+},
+"IsPayrollExport": {
+"type": "boolean"
+},
+"IsDefault": {
+"type": "boolean"
+},
+"IsCalculationValid": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"ReportDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"nullable": true
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"IsPayrollExport": {
+"type": "boolean"
+},
+"IsDefault": {
+"type": "boolean"
+},
+"Templates": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/TemplateDto"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ReportFilterDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Label": {
+"type": "string",
+"nullable": true
+},
+"IsMandatory": {
+"type": "boolean"
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"SelectedValue": {
+"type": "array",
+"items": {
+"type": "string"
+},
+"nullable": true
+},
+"AvailableValues": {
+"type": "object",
+"additionalProperties": {
+"type": "string",
+"nullable": true
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ReportSettingDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Label": {
+"type": "string",
+"nullable": true
+},
+"Tooltip": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"OrderIndex": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"SelectedValue": {
+"type": "string",
+"nullable": true
+},
+"SelectedNumberValue": {
+"type": "string",
+"nullable": true
+},
+"AvailableValues": {
+"type": "object",
+"additionalProperties": {
+"type": "string",
+"nullable": true
+},
+"nullable": true
+},
+"GridSettings": {
+"type": "object",
+"additionalProperties": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/PayrollGridSettingDto"
+},
+"nullable": true
+},
+"nullable": true
+},
+"AvailableValueLengthOptions": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/ReportSettingDto"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ReportTemplateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"nullable": true
+},
+"CreatedTimestamp": {
+"type": "string",
+"format": "date-time"
+},
+"UpdatedTimestamp": {
+"type": "string",
+"format": "date-time"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Template": {
+"type": "string",
+"nullable": true
+},
+"UserId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"RequestType": {
+"enum": [0, 1, 2, 3, 4, 5],
+"type": "integer",
+"format": "int32"
+},
+"RequiredTimeDayParametersDto": {
+"type": "object",
+"properties": {
+"Duration": {
+"type": "integer",
+"format": "int32"
+},
+"Offset": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"ResultValueType": {
+"enum": [0, 1, 2, 3],
+"type": "integer",
+"format": "int32"
+},
+"RoleClaimActionDto": {
+"type": "object",
+"properties": {
+"ClaimActionId": {
+"type": "string",
+"format": "uuid"
+},
+"ClaimActionType": {
+"type": "integer",
+"format": "int32"
+},
+"ClaimId": {
+"type": "string",
+"format": "uuid"
+},
+"ClaimName": {
+"type": "string",
+"nullable": true
+},
+"AuthorizationModuleId": {
+"type": "string",
+"format": "uuid"
+}
+},
+"additionalProperties": false
+},
+"RoleDefinitionCreateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"ClaimActions": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/ClaimActionDto"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"RoleDefinitionDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Code": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"RoleDefinitionSummaryDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Code": {
+"type": "integer",
+"format": "int32"
+},
+"RoleClaimActions": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/RoleClaimActionDto"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"RoleDefinitionUpdateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"ClaimActions": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/ClaimActionDto"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"RoundingFunctionDto": {
+"type": "object",
+"properties": {
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"IsEnabled": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"ShiftColorRuleDto": {
+"type": "object",
+"properties": {
+"ClockingTimeInterval": {
+"$ref": "#/components/schemas/Int32Int32KeyValuePair"
+},
+"ColorIndex": {
+"type": "integer",
+"format": "int32"
+},
+"StartingWorkPlanRuleSettingsId": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"SubscriptionCreateDto": {
+"type": "object",
+"properties": {
+"Interval": {
+"type": "string",
+"nullable": true
+},
+"SubscriptionItems": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/SubscriptionItemDto"
+},
+"nullable": true
+},
+"Coupon": {
+"type": "string",
+"nullable": true
+},
+"OffSession": {
+"type": "boolean",
+"nullable": true
+},
+"PaymentType": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"SubscriptionDto": {
+"type": "object",
+"properties": {
+"Delinquent": {
+"type": "boolean",
+"nullable": true
+},
+"SubscriptionOptions": {
+"type": "integer",
+"format": "int32"
+},
+"PartnerType": {
+"type": "integer",
+"format": "int32"
+},
+"Status": {
+"type": "string",
+"nullable": true
+},
+"TrialEnd": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CurrentPeriodStart": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CurrentPeriodEnd": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CancelAt": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"Interval": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"SubscriptionExtendedDto": {
+"type": "object",
+"properties": {
+"Delinquent": {
+"type": "boolean",
+"nullable": true
+},
+"SubscriptionOptions": {
+"type": "integer",
+"format": "int32"
+},
+"PartnerType": {
+"type": "integer",
+"format": "int32"
+},
+"Status": {
+"type": "string",
+"nullable": true
+},
+"TrialEnd": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CurrentPeriodStart": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CurrentPeriodEnd": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CancelAt": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"Interval": {
+"type": "string",
+"nullable": true
+},
+"Coupon": {
+"type": "string",
+"nullable": true
+},
+"SubscriptionItems": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/SubscriptionItemDto"
+},
+"nullable": true
+},
+"CollectionMethod": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"SubscriptionItemDto": {
+"type": "object",
+"properties": {
+"Quantity": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"UnitAmount": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"FlatAmount": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"Deleted": {
+"type": "boolean",
+"nullable": true
+},
+"Product": {
+"type": "integer",
+"format": "int32"
+},
+"ProductName": {
+"type": "string",
+"nullable": true
+},
+"Amount": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"SubscriptionPlanDto": {
+"type": "object",
+"properties": {
+"Product": {
+"type": "integer",
+"format": "int32"
+},
+"PlanId": {
+"type": "string",
+"nullable": true
+},
+"Amount": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"AmountDecimal": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"Interval": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"SubscriptionUpdateDto": {
+"type": "object",
+"properties": {
+"Interval": {
+"type": "string",
+"nullable": true
+},
+"CancelAtPeriodEnd": {
+"type": "boolean",
+"nullable": true
+},
+"Coupon": {
+"type": "string",
+"nullable": true
+},
+"SubscriptionItems": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/SubscriptionItemDto"
+},
+"nullable": true
+},
+"PaymentType": {
+"type": "string",
+"nullable": true
+},
+"OffSession": {
+"type": "boolean",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"SystemSettingCreateDto": {
+"type": "object",
+"properties": {
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"Value": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"SystemSettingDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"Value": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"SystemSettingUpdateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Value": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"TagDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Color": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"TemplateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"LastUpdate": {
+"type": "string",
+"format": "date-time"
+}
+},
+"additionalProperties": false
+},
+"TenantCardTokenDto": {
+"type": "object",
+"properties": {
+"SecretKey": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"TenantDeleteDto": {
+"type": "object",
+"properties": {
+"CloseReason": {
+"type": "integer",
+"format": "int32"
+},
+"Comment": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"TenantDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Telephone": {
+"type": "string",
+"nullable": true
+},
+"ContactEmail": {
+"type": "string",
+"nullable": true
+},
+"CountryCode": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"TenantOnboardingProgressDto": {
+"type": "object",
+"properties": {
+"GlobalRules": {
+"type": "boolean"
+},
+"UserImport": {
+"type": "boolean"
+},
+"Reports": {
+"type": "boolean"
+},
+"PaidSubscription": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"TenantPaymentMethodDto": {
+"type": "object",
+"properties": {
+"PaymentMethodId": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "string",
+"nullable": true
+},
+"Card": {
+"$ref": "#/components/schemas/CardDto"
+}
+},
+"additionalProperties": false
+},
+"TenantPaymentMethodUpdateDto": {
+"type": "object",
+"properties": {
+"SubscriptionId": {
+"type": "string",
+"nullable": true
+},
+"PaymentType": {
+"type": "string",
+"nullable": true
+},
+"PaymentMethodId": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"TenantUpdateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"ContactEmail": {
+"type": "string",
+"nullable": true
+},
+"CountryCode": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"TenantVatDto": {
+"type": "object",
+"properties": {
+"Vat": {
+"type": "string",
+"nullable": true
+},
+"CountryCode": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"TimeClockCreateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"MacAddress": {
+"type": "string",
+"nullable": true
+},
+"PairCode": {
+"type": "string",
+"nullable": true
+},
+"TimeZone": {
+"type": "string",
+"nullable": true
+},
+"Language": {
+"type": "string",
+"nullable": true
+},
+"ClockingPointId": {
+"type": "string",
+"format": "uuid"
+},
+"CanOpenDoors": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"TimeClockDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"DeviceModel": {
+"type": "string",
+"nullable": true
+},
+"PairCode": {
+"type": "string",
+"nullable": true
+},
+"MacAddress": {
+"type": "string",
+"nullable": true
+},
+"TimeZone": {
+"type": "string",
+"nullable": true
+},
+"Language": {
+"type": "string",
+"nullable": true
+},
+"LastOnline": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"ClockingPointId": {
+"type": "string",
+"format": "uuid"
+},
+"ClockingInterfaceId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"CanOpenDoors": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"TimeClockStatusDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "string",
+"nullable": true
+},
+"Status": {
+"type": "integer",
+"format": "int32"
+},
+"LastOnline": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"LastData": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"TimeClockUpdateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"TimeZone": {
+"type": "string",
+"nullable": true
+},
+"Language": {
+"type": "string",
+"nullable": true
+},
+"CanOpenDoors": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"TimePolicyBulkCopyDto": {
+"type": "object",
+"properties": {
+"TimePolicyIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"TimePolicyDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"ShortName": {
+"type": "string",
+"nullable": true
+},
+"Description": {
+"type": "string",
+"nullable": true
+},
+"Color": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"TimeSegmentDto": {
+"type": "object",
+"properties": {
+"StartTime": {
+"type": "string",
+"format": "date-time"
+},
+"EndTime": {
+"type": "string",
+"format": "date-time"
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"Value": {
+"type": "number",
+"format": "double"
+},
+"Color": {
+"type": "string",
+"nullable": true
+},
+"Thickness": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"TimeZoneDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"nullable": true
+},
+"DisplayName": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UnknownClockingDto": {
+"type": "object",
+"properties": {
+"TimeStamp": {
+"type": "string",
+"format": "date-time"
+},
+"OriginalTimeStamp": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"InsertedOn": {
+"type": "string",
+"format": "date-time"
+},
+"ControllerId": {
+"type": "string",
+"format": "uuid"
+},
+"SynchronizationValue": {
+"type": "integer",
+"format": "int64",
+"nullable": true
+},
+"IdentifierNumber": {
+"type": "string",
+"nullable": true
+},
+"TimeEventId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"TenantId": {
+"type": "string",
+"format": "uuid"
+},
+"ClockingDefinitionName": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserApproverDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"PictureUri": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserArchiveDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"IsTimeAttendanceUser": {
+"type": "boolean"
+},
+"ArchiveAt": {
+"type": "string",
+"format": "date-time"
+}
+},
+"additionalProperties": false
+},
+"UserBalanceImportDto": {
+"type": "object",
+"properties": {
+"TraceId": {
+"type": "string",
+"nullable": true
+},
+"Email": {
+"type": "string",
+"nullable": true
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"BalanceOfHours": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"VacationDays": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"LastYearVacationDays": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"BalancesUpdateDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserBasicDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"PictureUri": {
+"type": "string",
+"nullable": true
+},
+"IsArchived": {
+"type": "boolean"
+},
+"CalculationStartDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CalculationStopDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserBulkClockingPointRestrictionUpdateDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"ClockingPointIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserBulkDeleteDto": {
+"type": "object",
+"properties": {
+"UserIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserBulkInviteDto": {
+"type": "object",
+"properties": {
+"UserIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserCalculationDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"MiddleName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"UserName": {
+"type": "string",
+"nullable": true
+},
+"DateFrom": {
+"type": "string",
+"format": "date"
+},
+"DateTo": {
+"type": "string",
+"format": "date"
+},
+"DailyCalculations": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/UserDailyCalculationDto"
+},
+"nullable": true
+},
+"IsCalculationValid": {
+"type": "boolean"
+},
+"CalculationStartDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"IsUserArchived": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"UserCalculationPageDto": {
+"type": "object",
+"properties": {
+"UserCalculations": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/UserCalculationDto"
+},
+"nullable": true
+},
+"TotalCount": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"UserCalculationTimePolicyDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"ShortName": {
+"type": "string",
+"nullable": true
+},
+"Description": {
+"type": "string",
+"nullable": true
+},
+"Color": {
+"type": "integer",
+"format": "int32"
+},
+"IsCalculated": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"UserCalculationsDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"MiddleName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"UserName": {
+"type": "string",
+"nullable": true
+},
+"PaidPresenceValue": {
+"type": "integer",
+"format": "int32"
+},
+"PaidAbsenceValue": {
+"type": "integer",
+"format": "int32"
+},
+"MissingPresenceValue": {
+"type": "integer",
+"format": "int32"
+},
+"UnpaidPresenceValue": {
+"type": "integer",
+"format": "int32"
+},
+"NumberOfWorkDays": {
+"type": "integer",
+"format": "int32"
+},
+"NumberOfWorkFreeDays": {
+"type": "integer",
+"format": "int32"
+},
+"PaidTimeSumValue": {
+"type": "integer",
+"format": "int32",
+"readOnly": true
+},
+"DifferenceSumValue": {
+"type": "integer",
+"format": "int32"
+},
+"PlanValue": {
+"type": "integer",
+"format": "int32"
+},
+"DateFrom": {
+"type": "string",
+"format": "date-time"
+},
+"DateTo": {
+"type": "string",
+"format": "date-time"
+},
+"IsCalculationValid": {
+"type": "boolean"
+},
+"Categories": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/CalculationCategoryDto"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserCalendarEventDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"UserName": {
+"type": "string",
+"nullable": true
+},
+"WeekendDates": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "date-time"
+},
+"nullable": true
+},
+"Holidays": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/HolidayDto"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserCalendarGroupBulkUpdateDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"CalendarGroupId": {
+"type": "string",
+"format": "uuid"
+},
+"MemberFrom": {
+"type": "string",
+"format": "date-time"
+},
+"MemberTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserCalendarGroupUpdateDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"CalendarId": {
+"type": "string",
+"format": "uuid"
+},
+"MemberFrom": {
+"type": "string",
+"format": "date-time"
+},
+"MemberTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserClockingPointRestrictionUpdateDto": {
+"type": "object",
+"properties": {
+"ClockingPointIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserCreateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"MiddleName": {
+"type": "string",
+"nullable": true
+},
+"FullName": {
+"type": "string",
+"nullable": true
+},
+"BirthDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"Address": {
+"type": "string",
+"nullable": true
+},
+"City": {
+"type": "string",
+"nullable": true
+},
+"State": {
+"type": "string",
+"nullable": true
+},
+"Phone": {
+"type": "string",
+"nullable": true
+},
+"Mobile": {
+"type": "string",
+"nullable": true
+},
+"Email": {
+"type": "string",
+"nullable": true
+},
+"Gender": {
+"type": "string",
+"nullable": true
+},
+"PictureUri": {
+"type": "string",
+"nullable": true
+},
+"CustomId": {
+"type": "string",
+"nullable": true
+},
+"CustomField1": {
+"type": "string",
+"nullable": true
+},
+"CustomField2": {
+"type": "string",
+"nullable": true
+},
+"CustomField3": {
+"type": "string",
+"nullable": true
+},
+"CustomField4": {
+"type": "string",
+"nullable": true
+},
+"CustomField5": {
+"type": "string",
+"nullable": true
+},
+"CustomField6": {
+"type": "string",
+"nullable": true
+},
+"CustomField7": {
+"type": "string",
+"nullable": true
+},
+"CustomField8": {
+"type": "string",
+"nullable": true
+},
+"CustomField9": {
+"type": "string",
+"nullable": true
+},
+"CustomField10": {
+"type": "string",
+"nullable": true
+},
+"IsTimeAttendanceUser": {
+"type": "boolean"
+},
+"IsArchived": {
+"type": "boolean"
+},
+"HasUserAccount": {
+"type": "boolean"
+},
+"UserAccountId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"UserName": {
+"type": "string",
+"nullable": true
+},
+"CalculationStartDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CalculationStopDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"HasAssignedPin": {
+"type": "boolean",
+"nullable": true
+},
+"SendInvite": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"UserDailyCalculationDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"MiddleName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"UserName": {
+"type": "string",
+"nullable": true
+},
+"Date": {
+"type": "string",
+"format": "date"
+},
+"DailyComment": {
+"type": "string",
+"nullable": true
+},
+"ShiftStartMarkers": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "date-time"
+},
+"nullable": true
+},
+"CalculationResultSegments": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/TimeSegmentDto"
+},
+"nullable": true
+},
+"PlannedPresenceSegments": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/TimeSegmentDto"
+},
+"nullable": true
+},
+"Exceptions": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/CalculationResultDto"
+},
+"nullable": true
+},
+"Accruals": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/CalculationResultDto"
+},
+"nullable": true
+},
+"Categories": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/DailyCategoryDto"
+},
+"nullable": true
+},
+"CalculationResultSummary": {
+"$ref": "#/components/schemas/DailySummaryDto"
+},
+"Absences": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/AbsenceDto"
+},
+"nullable": true
+},
+"Adjustments": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/AdjustmentDto"
+},
+"nullable": true
+},
+"Clockings": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/ClockingDto"
+},
+"nullable": true
+},
+"MissingEventExceptions": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/MissingEventExceptionDto"
+},
+"nullable": true
+},
+"IsCalculationValid": {
+"type": "boolean"
+},
+"PrevalentCategory": {
+"$ref": "#/components/schemas/DailyCategoryDto"
+},
+"IsHoliday": {
+"type": "boolean",
+"nullable": true
+},
+"IsWeekend": {
+"type": "boolean",
+"nullable": true
+},
+"HolidayName": {
+"type": "string",
+"nullable": true
+},
+"TimePolicy": {
+"$ref": "#/components/schemas/UserCalculationTimePolicyDto"
+},
+"IsPriorCalculationStartDate": {
+"type": "boolean"
+},
+"IsAfterCalculationEndDate": {
+"type": "boolean"
+},
+"UsingGlobalTimeRules": {
+"type": "boolean",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"MiddleName": {
+"type": "string",
+"nullable": true
+},
+"FullName": {
+"type": "string",
+"nullable": true
+},
+"BirthDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"Address": {
+"type": "string",
+"nullable": true
+},
+"City": {
+"type": "string",
+"nullable": true
+},
+"State": {
+"type": "string",
+"nullable": true
+},
+"Phone": {
+"type": "string",
+"nullable": true
+},
+"Mobile": {
+"type": "string",
+"nullable": true
+},
+"Email": {
+"type": "string",
+"nullable": true
+},
+"Gender": {
+"type": "string",
+"nullable": true
+},
+"PictureUri": {
+"type": "string",
+"nullable": true
+},
+"CustomId": {
+"type": "string",
+"nullable": true
+},
+"CustomField1": {
+"type": "string",
+"nullable": true
+},
+"CustomField2": {
+"type": "string",
+"nullable": true
+},
+"CustomField3": {
+"type": "string",
+"nullable": true
+},
+"CustomField4": {
+"type": "string",
+"nullable": true
+},
+"CustomField5": {
+"type": "string",
+"nullable": true
+},
+"CustomField6": {
+"type": "string",
+"nullable": true
+},
+"CustomField7": {
+"type": "string",
+"nullable": true
+},
+"CustomField8": {
+"type": "string",
+"nullable": true
+},
+"CustomField9": {
+"type": "string",
+"nullable": true
+},
+"CustomField10": {
+"type": "string",
+"nullable": true
+},
+"IsTimeAttendanceUser": {
+"type": "boolean"
+},
+"IsArchived": {
+"type": "boolean"
+},
+"HasUserAccount": {
+"type": "boolean"
+},
+"UserAccountId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"UserName": {
+"type": "string",
+"nullable": true
+},
+"CalculationStartDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CalculationStopDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"HasAssignedPin": {
+"type": "boolean",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserIdentifierUpdateDto": {
+"type": "object",
+"properties": {
+"IdentifierIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserImportDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"MiddleName": {
+"type": "string",
+"nullable": true
+},
+"FullName": {
+"type": "string",
+"nullable": true
+},
+"BirthDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"Address": {
+"type": "string",
+"nullable": true
+},
+"City": {
+"type": "string",
+"nullable": true
+},
+"State": {
+"type": "string",
+"nullable": true
+},
+"Phone": {
+"type": "string",
+"nullable": true
+},
+"Mobile": {
+"type": "string",
+"nullable": true
+},
+"Email": {
+"type": "string",
+"nullable": true
+},
+"Gender": {
+"type": "string",
+"nullable": true
+},
+"PictureUri": {
+"type": "string",
+"nullable": true
+},
+"CustomId": {
+"type": "string",
+"nullable": true
+},
+"CustomField1": {
+"type": "string",
+"nullable": true
+},
+"CustomField2": {
+"type": "string",
+"nullable": true
+},
+"CustomField3": {
+"type": "string",
+"nullable": true
+},
+"CustomField4": {
+"type": "string",
+"nullable": true
+},
+"CustomField5": {
+"type": "string",
+"nullable": true
+},
+"CustomField6": {
+"type": "string",
+"nullable": true
+},
+"CustomField7": {
+"type": "string",
+"nullable": true
+},
+"CustomField8": {
+"type": "string",
+"nullable": true
+},
+"CustomField9": {
+"type": "string",
+"nullable": true
+},
+"CustomField10": {
+"type": "string",
+"nullable": true
+},
+"IsTimeAttendanceUser": {
+"type": "boolean"
+},
+"IsArchived": {
+"type": "boolean"
+},
+"HasUserAccount": {
+"type": "boolean"
+},
+"UserAccountId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"UserName": {
+"type": "string",
+"nullable": true
+},
+"CalculationStartDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CalculationStopDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"HasAssignedPin": {
+"type": "boolean",
+"nullable": true
+},
+"SendInvite": {
+"type": "boolean"
+},
+"TraceId": {
+"type": "string",
+"nullable": true
+},
+"IdentifierValues": {
+"type": "array",
+"items": {
+"type": "string"
+},
+"nullable": true
+},
+"IdentifierIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+},
+"AuthorizationRoleIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+},
+"BalanceOfHours": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"VacationDays": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"LastYearVacationDays": {
+"type": "number",
+"format": "double",
+"nullable": true
+},
+"OrganizationUnitId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"WorkPlanId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"OrganizationUnits": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserImportStatusDto": {
+"type": "object",
+"properties": {
+"TraceId": {
+"type": "string",
+"nullable": true
+},
+"Error": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserInviteDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"Uri": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserOrganizationUnitBulkUpdateDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"OrganizationUnitId": {
+"type": "string",
+"format": "uuid"
+},
+"MemberFrom": {
+"type": "string",
+"format": "date-time"
+},
+"MemberTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserOrganizationUnitRestrictionDto": {
+"type": "object",
+"properties": {
+"OrganizationUnitIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserOrganizationUnitUpdateDto": {
+"type": "object",
+"properties": {
+"OrganizationUnitId": {
+"type": "string",
+"format": "uuid"
+},
+"MemberFrom": {
+"type": "string",
+"format": "date-time"
+},
+"MemberTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserPermissionsDto": {
+"type": "object",
+"properties": {
+"IsAdministrator": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"UserPictureDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"PictureUri": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserPinDto": {
+"type": "object",
+"properties": {
+"Pin": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserPresenceDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"MiddleName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"UserStatus": {
+"type": "integer",
+"format": "int32"
+},
+"EventTimestamp": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"LastClockedEventClockingPointName": {
+"type": "string",
+"nullable": true
+},
+"ClockingDefinitionName": {
+"type": "string",
+"nullable": true
+},
+"ClockingDefinitionId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"AbsenceDefinitionName": {
+"type": "string",
+"nullable": true
+},
+"AbsenceDefinitionId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"IsCalculationValid": {
+"type": "boolean"
+},
+"UserPictureUri": {
+"type": "string",
+"nullable": true
+},
+"UserStatusAdditionalInfo": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserRecalculateDto": {
+"type": "object",
+"properties": {
+"DateTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserRecalculateStatusDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"Status": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"UserRoleBulkUpdateDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"AuthorizationRoleIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserRoleUpdateDto": {
+"type": "object",
+"properties": {
+"AuthorizationRoleIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserSettingCreateDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Value": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserSettingDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Value": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserSettingUpdateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Value": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserSummaryClockingPointDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserSummaryDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"MiddleName": {
+"type": "string",
+"nullable": true
+},
+"FullName": {
+"type": "string",
+"nullable": true
+},
+"BirthDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"Address": {
+"type": "string",
+"nullable": true
+},
+"City": {
+"type": "string",
+"nullable": true
+},
+"State": {
+"type": "string",
+"nullable": true
+},
+"Phone": {
+"type": "string",
+"nullable": true
+},
+"Mobile": {
+"type": "string",
+"nullable": true
+},
+"Email": {
+"type": "string",
+"nullable": true
+},
+"Gender": {
+"type": "string",
+"nullable": true
+},
+"PictureUri": {
+"type": "string",
+"nullable": true
+},
+"CustomId": {
+"type": "string",
+"nullable": true
+},
+"CustomField1": {
+"type": "string",
+"nullable": true
+},
+"CustomField2": {
+"type": "string",
+"nullable": true
+},
+"CustomField3": {
+"type": "string",
+"nullable": true
+},
+"CustomField4": {
+"type": "string",
+"nullable": true
+},
+"CustomField5": {
+"type": "string",
+"nullable": true
+},
+"CustomField6": {
+"type": "string",
+"nullable": true
+},
+"CustomField7": {
+"type": "string",
+"nullable": true
+},
+"CustomField8": {
+"type": "string",
+"nullable": true
+},
+"CustomField9": {
+"type": "string",
+"nullable": true
+},
+"CustomField10": {
+"type": "string",
+"nullable": true
+},
+"IsTimeAttendanceUser": {
+"type": "boolean"
+},
+"IsArchived": {
+"type": "boolean"
+},
+"HasUserAccount": {
+"type": "boolean"
+},
+"UserAccountId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"UserName": {
+"type": "string",
+"nullable": true
+},
+"CalculationStartDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CalculationStopDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"HasAssignedPin": {
+"type": "boolean",
+"nullable": true
+},
+"CurrentWorkPlan": {
+"nullable": true
+},
+"CurrentOrganizationUnit": {
+"nullable": true
+},
+"CurrentCalendarGroup": {
+"nullable": true
+},
+"AuthorizationRoles": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/UserSummaryRoleDefinitionDto"
+},
+"nullable": true
+},
+"Identifiers": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/UserSummaryIdentifierDto"
+},
+"nullable": true
+},
+"Tags": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/UserSummaryTagDto"
+},
+"nullable": true
+},
+"ClockingPoints": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/UserSummaryClockingPointDto"
+},
+"nullable": true
+},
+"TagRestrictions": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/UserSummaryTagRestrictionDto"
+},
+"nullable": true
+},
+"OrganizationUnitRestrictions": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/UserSummaryOrganizationUnitRestrictionDto"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserSummaryIdentifierDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Value": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserSummaryOrganizationUnitRestrictionDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserSummaryRoleDefinitionDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserSummaryTagDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Color": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"UserSummaryTagRestrictionDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserTagBulkUpdateDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"TagIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserTagRestrictionUpdateDto": {
+"type": "object",
+"properties": {
+"TagIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserTagUpdateDto": {
+"type": "object",
+"properties": {
+"TagIds": {
+"type": "array",
+"items": {
+"type": "string",
+"format": "uuid"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserTimePolicyCreateDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"TimePolicyId": {
+"type": "string",
+"format": "uuid"
+},
+"DateFrom": {
+"type": "string",
+"format": "date-time"
+},
+"DateTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserTimePolicyDeleteDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"DateFrom": {
+"type": "string",
+"format": "date-time"
+},
+"DateTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserTimePolicyDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"TimePolicyId": {
+"type": "string",
+"format": "uuid"
+},
+"DateTime": {
+"type": "string",
+"format": "date-time"
+},
+"IsCalculated": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"UserUpdateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"MiddleName": {
+"type": "string",
+"nullable": true
+},
+"FullName": {
+"type": "string",
+"nullable": true
+},
+"BirthDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"Address": {
+"type": "string",
+"nullable": true
+},
+"City": {
+"type": "string",
+"nullable": true
+},
+"State": {
+"type": "string",
+"nullable": true
+},
+"Phone": {
+"type": "string",
+"nullable": true
+},
+"Mobile": {
+"type": "string",
+"nullable": true
+},
+"Email": {
+"type": "string",
+"nullable": true
+},
+"Gender": {
+"type": "string",
+"nullable": true
+},
+"PictureUri": {
+"type": "string",
+"nullable": true
+},
+"CustomId": {
+"type": "string",
+"nullable": true
+},
+"CustomField1": {
+"type": "string",
+"nullable": true
+},
+"CustomField2": {
+"type": "string",
+"nullable": true
+},
+"CustomField3": {
+"type": "string",
+"nullable": true
+},
+"CustomField4": {
+"type": "string",
+"nullable": true
+},
+"CustomField5": {
+"type": "string",
+"nullable": true
+},
+"CustomField6": {
+"type": "string",
+"nullable": true
+},
+"CustomField7": {
+"type": "string",
+"nullable": true
+},
+"CustomField8": {
+"type": "string",
+"nullable": true
+},
+"CustomField9": {
+"type": "string",
+"nullable": true
+},
+"CustomField10": {
+"type": "string",
+"nullable": true
+},
+"IsTimeAttendanceUser": {
+"type": "boolean"
+},
+"IsArchived": {
+"type": "boolean"
+},
+"HasUserAccount": {
+"type": "boolean"
+},
+"UserAccountId": {
+"type": "string",
+"format": "uuid",
+"nullable": true
+},
+"UserName": {
+"type": "string",
+"nullable": true
+},
+"CalculationStartDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CalculationStopDate": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"HasAssignedPin": {
+"type": "boolean",
+"nullable": true
+},
+"SendInvite": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"UserVacationImportDto": {
+"type": "object",
+"properties": {
+"TraceId": {
+"type": "string",
+"nullable": true
+},
+"Email": {
+"type": "string",
+"nullable": true
+},
+"FirstName": {
+"type": "string",
+"nullable": true
+},
+"LastName": {
+"type": "string",
+"nullable": true
+},
+"VacationQuota": {
+"type": "number",
+"format": "double"
+},
+"Timestamp": {
+"type": "string",
+"format": "date-time"
+},
+"OverrideExistingVacationBalances": {
+"type": "boolean"
+}
+},
+"additionalProperties": false
+},
+"UserVacationQuotaDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"PreviousPeriodVacationQuota": {
+"$ref": "#/components/schemas/PreviousPeriodVacationQuotaDto"
+},
+"CurrentPeriodVacationQuota": {
+"$ref": "#/components/schemas/CurrentPeriodVacationQuotaDto"
+}
+},
+"additionalProperties": false
+},
+"UserWorkPlanBulkUpdateDto": {
+"type": "object",
+"properties": {
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"WorkPlanId": {
+"type": "string",
+"format": "uuid"
+},
+"MemberFrom": {
+"type": "string",
+"format": "date-time"
+},
+"MemberTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CycleStartIndex": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"UserWorkPlanUpdateDto": {
+"type": "object",
+"properties": {
+"WorkPlanId": {
+"type": "string",
+"format": "uuid"
+},
+"MemberFrom": {
+"type": "string",
+"format": "date-time"
+},
+"MemberTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CycleStart": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CycleStartIndex": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ViesVatApproximateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Street": {
+"type": "string",
+"nullable": true
+},
+"PostalCode": {
+"type": "string",
+"nullable": true
+},
+"City": {
+"type": "string",
+"nullable": true
+},
+"CompanyType": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"ViesVatVerificationDto": {
+"type": "object",
+"properties": {
+"IsValid": {
+"type": "boolean"
+},
+"UserError": {
+"type": "string",
+"nullable": true
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Address": {
+"type": "string",
+"nullable": true
+},
+"VatNumber": {
+"type": "string",
+"nullable": true
+},
+"ViesVatApproximate": {
+"$ref": "#/components/schemas/ViesVatApproximateDto"
+}
+},
+"additionalProperties": false
+},
+"ViewSettingDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"ViewId": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+},
+"FilterValues": {
+"type": "string",
+"nullable": true
+},
+"CustomFilters": {
+"type": "string",
+"nullable": true
+},
+"GridValues": {
+"type": "string",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"WorkPlanCreateDto": {
+"type": "object",
+"properties": {
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"WorkPlanPolicies": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/WorkPlanPolicyCreateDto"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"WorkPlanDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"WorkPlanMembershipDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"UserId": {
+"type": "string",
+"format": "uuid"
+},
+"WorkPlanId": {
+"type": "string",
+"format": "uuid"
+},
+"WorkPlanName": {
+"type": "string",
+"nullable": true
+},
+"MemberFrom": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"MemberTo": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CycleStart": {
+"type": "string",
+"format": "date-time",
+"nullable": true
+},
+"CycleStartIndex": {
+"type": "integer",
+"format": "int32",
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"WorkPlanPolicyCreateDto": {
+"type": "object",
+"properties": {
+"TimePolicyId": {
+"type": "string",
+"format": "uuid"
+},
+"Priority": {
+"type": "integer",
+"format": "int32"
+},
+"DayTypesRestriction": {
+"type": "integer",
+"format": "int32"
+},
+"ArrivalRestrictionFromValue": {
+"type": "integer",
+"format": "int32"
+},
+"ArrivalRestrictionToValue": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"WorkPlanPolicyDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"TimePolicyId": {
+"type": "string",
+"format": "uuid"
+},
+"TimePolicyName": {
+"type": "string",
+"nullable": true
+},
+"Priority": {
+"type": "integer",
+"format": "int32"
+},
+"DayTypesRestriction": {
+"type": "integer",
+"format": "int32"
+},
+"ArrivalRestrictionFromValue": {
+"type": "integer",
+"format": "int32"
+},
+"ArrivalRestrictionToValue": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"WorkPlanPolicyUpdateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"TimePolicyId": {
+"type": "string",
+"format": "uuid"
+},
+"Priority": {
+"type": "integer",
+"format": "int32"
+},
+"DayTypesRestriction": {
+"type": "integer",
+"format": "int32"
+},
+"ArrivalRestrictionFromValue": {
+"type": "integer",
+"format": "int32"
+},
+"ArrivalRestrictionToValue": {
+"type": "integer",
+"format": "int32"
+}
+},
+"additionalProperties": false
+},
+"WorkPlanSummaryDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"WorkPlanPolicies": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/WorkPlanPolicyDto"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+},
+"WorkPlanUpdateDto": {
+"type": "object",
+"properties": {
+"Id": {
+"type": "string",
+"format": "uuid"
+},
+"Name": {
+"type": "string",
+"nullable": true
+},
+"Type": {
+"type": "integer",
+"format": "int32"
+},
+"WorkPlanPolicies": {
+"type": "array",
+"items": {
+"$ref": "#/components/schemas/WorkPlanPolicyUpdateDto"
+},
+"nullable": true
+}
+},
+"additionalProperties": false
+}
+}
